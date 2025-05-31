@@ -1,0 +1,11 @@
+create table if not exists menues(
+    id int UNSIGNED NOT NULL AUTO_INCREMENT,
+    plato VARCHAR(60) NOT NULL UNIQUE,
+    descripcion VARCHAR(255) NOT NULL,
+    precio FLOAT NOT NULL,
+    descuento BOOLEAN DEFAULT 0, 
+    estado BOOLEAN DEFAULT 1,
+    creadoEl TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    actualizadoEl TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+);
